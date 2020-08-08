@@ -1,0 +1,7 @@
+SELECT professors_name AS "Professor", AVG(grade_value) AS "Average Grade Given"
+FROM Courses
+JOIN Professors
+ON Courses.course_professor_id = professor_id
+JOIN Grades
+ON Courses.course_id = grade_course_id
+GROUP BY professors_name;

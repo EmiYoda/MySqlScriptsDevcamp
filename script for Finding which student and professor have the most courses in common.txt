@@ -1,0 +1,9 @@
+SELECT grade_student_id AS "Student Course", course_professor_id AS "Professor Course"
+FROM Grades
+JOIN Students
+ON Grades.grade_student_id = student_id
+JOIN Courses
+ON Grades.grade_course_id = course_id
+JOIN Professors
+ON Courses.course_professor_id = professor_id
+ORDER BY grade_student_id, course_professor_id ASC;

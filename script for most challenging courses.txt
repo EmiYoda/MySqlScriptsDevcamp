@@ -1,0 +1,5 @@
+SELECT grade_value AS "Course Grade Value", course_name "Course Name"
+FROM Grades
+JOIN Courses
+ON Grades.grade_course_id = course_id
+ORDER BY grade_value ASC;
